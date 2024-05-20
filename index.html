@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Đăng Ký và Đăng Nhập</title>
+    <style> 
+	header {
+		text-align: center;
+		padding: 20px;
+	}
+
+	header img {
+		width: 250px;
+		height: auto;
+		border-radius: 50%; 
+	}
+
+	.form-container {
+		max-width: 400px;
+		margin: 0 auto;
+		padding: 20px;
+		background: rgba(255, 255, 255, 0.7);
+		border-radius: 5px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	}
+
+	.form-toggle {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.form-toggle button {
+		background: red;
+		color: #fff;
+		border: none;
+		padding: 10px 20px;
+		cursor: pointer;
+		margin: 5px;
+	}
+
+	.form-toggle button.active {
+		background: red;
+	}
+
+	.form-toggle button:hover b {
+		color: blue; 
+	}
+
+	.form {
+		display: none;
+	}
+
+	.form h2 {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.form input, .form button {
+		width: calc(100% - 10px); 
+		padding: 10px;
+		margin: 10px 0;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		box-sizing: border-box;
+	}
+
+	.form button {
+		background: red;
+		color: #fff;
+		border: none;
+		cursor: pointer;
+	}
+
+	.form button:active b {
+		color: blue;
+	}
+	.form.hidden {
+		display: none;
+	}
+
+	.form:not(.hidden) {
+		display: block;
+	}
+    </style>
+</head>
+<body>
+    <header>
+          <img src="Images/logo.png" alt="Logo" class="logo">
+    </header>
+    <div class="form-container">
+        <div class="form-toggle">
+            <button id="login-toggle" onclick="toggleForm('login')"><b>Đăng Nhập</b></button>
+            <button id="register-toggle" onclick="toggleForm('register')"><b>Đăng Ký</b></button>
+        </div>
+        <form id="login-form" class="form" onsubmit="handleLogin(event)">
+            <h2><b>Đăng Nhập</b></h2>
+            <input type="email" id="login-email" placeholder="Email" required><br>
+            <input type="password" id="login-password" placeholder="Mật khẩu" required><br>
+            <button type="submit"><b>Đăng Nhập</b></button><br>
+        </form>
+        <form id="register-form" class="form hidden" onsubmit="handleRegister(event)">
+            <h2><b>Đăng Ký</b></h2>
+            <input type="text" id="register-username" placeholder="Tên đăng nhập" required><br>
+            <input type="email" id="register-email" placeholder="Email" required><br>
+            <input type="password" id="register-password" placeholder="Mật khẩu" required><br>
+            <input type="password" id="register-confirm-password" placeholder="Xác nhận mật khẩu" required><br><button type="submit"><b>Đăng Ký</B></button>
+        </form>
+    </div>
+    <script>
+	function toggleForm(form) {
+		var loginForm = document.getElementById('login-form');
+		var registerForm = document.getElementById('register-form');
+		var loginToggle = document.getElementById('login-toggle');
+		var registerToggle = document.getElementById('register-toggle');
+
+		if (form === 'login') {
+			loginForm.classList.remove('hidden');
+			registerForm.classList.add('hidden');
+			loginToggle.classList.add('active');
+			registerToggle.classList.remove('active');
+		} else {
+			loginForm.classList.add('hidden');
+			registerForm.classList.remove('hidden');
+			loginToggle.classList.remove('active');
+			registerToggle.classList.add('active');
+		}
+	}
+
+	document.addEventListener("DOMContentLoaded", function() {
+
+		if(localStorage.getItem('username') && localStorage.getItem('password')) {
+			toggleForm('login');
+		}
+	});
+
+	function handleLogin(event) {
+		event.preventDefault();
+		var username = document.getElementById('login-username').value;
+		var password = document.getElementById('login-password').value;
+
+		var storedPassword = localStorage.getItem('password');
+
+		if (password === storedPassword) {
+			alert("Đăng nhập thành công!");
+			window.location.href = "Trang Chủ.html"; 
+		} else {
+			alert("Tên đăng nhập hoặc mật khẩu không chính xác!");
+		}
+	}
+	function handleRegister(event) {
+		event.preventDefault();
+		var username = document.getElementById('register-username').value;
+		var email = document.getElementById('register-email').value;
+		var password = document.getElementById('register-password').value;
+		var confirmPassword = document.getElementById('register-confirm-password').value;
+
+		if (password !== confirmPassword) {
+			alert("Mật khẩu và xác nhận mật khẩu không khớp!");
+			return;
+		}
+
+	   
+		localStorage.setItem('username', username);
+		localStorage.setItem('email', email);
+		localStorage.setItem('password', password);
+
+		alert("Đăng ký thành công!");
+	   
+		window.location.href = "Trang Chủ.html"; 
+	}
+
+	function handleLogin(event) {
+		event.preventDefault();
+		var usernameOrEmail = document.getElementById('login-username').value;
+		var password = document.getElementById('login-password').value;
+
+	   
+		var storedUsername = localStorage.getItem('username');
+		var storedEmail = localStorage.getItem('email');
+		var storedPassword = localStorage.getItem('password');
+
+	   
+		if ((usernameOrEmail === storedUsername || usernameOrEmail === storedEmail) && password === storedPassword) {
+			alert("Đăng nhập thành công!");
+		   
+			window.location.href = "Trang Chủ.html"; 
+		} else {
+			alert("Tên đăng nhập hoặc email hoặc mật khẩu không chính xác!");
+		}
+	}
+	function handleRegister(event) {
+		event.preventDefault();
+		var username = document.getElementById('register-username').value;
+		var email = document.getElementById('register-email').value;
+		var password = document.getElementById('register-password').value;
+		var confirmPassword = document.getElementById('register-confirm-password').value;
+
+		if (password !== confirmPassword) {
+			alert("Mật khẩu và xác nhận mật khẩu không khớp!");
+			return;
+		}
+
+		localStorage.setItem('email', email);
+		localStorage.setItem('password', password);
+
+		alert("Đăng ký thành công!");
+		window.location.href = "index.html"; 
+	}
+
+	function handleLogin(event) {
+		event.preventDefault();
+		var email = document.getElementById('login-email').value;
+		var password = document.getElementById('login-password').value;
+
+	   
+		var storedEmail = localStorage.getItem('email');
+		var storedPassword = localStorage.getItem('password');
+
+	   
+		if (email === storedEmail && password === storedPassword) {
+			window.location.href = "Trang Chủ.html"; 
+		} else {
+			alert("Email hoặc mật khẩu không chính xác!");
+		}
+	}
+    </script>
+</body>
+</html>

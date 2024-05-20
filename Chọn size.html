@@ -1,0 +1,118 @@
+	<!DOCTYPE html>
+	<html lang="vi">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hướng dẫn chọn kích cỡ</title>
+		<link rel="stylesheet" href="style.css">
+		<style>
+	body {
+		font-family: Arial, sans-serif;
+		margin: 0;
+		padding: 0;
+		background-color: white;
+	}
+
+	.container {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	 header {
+				padding: 20px;
+				text-align: center;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				position: relative; 
+			}
+			.back-button {
+				position: absolute;
+				left: 10px;
+				top: 10px;
+				width: 30px; 
+				height: 30px;
+			}
+			.logo {
+				margin-top: 10px; 
+				color: #333;
+				font-size: 24px; 
+			}
+	nav ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	nav ul li a {
+		text-decoration: none;
+		color: #333;
+		font-weight: normal;
+		transition: color 0.3s ease;
+	}
+
+	nav ul li a:hover {
+		color: blue;
+	}
+	main {
+		padding: 20px 0;
+	}
+
+	.guide h2 {
+		color: #333;
+	}
+
+	.products {
+		display: flex;
+		justify-content: center;
+		margin-top: 30px;
+	}
+
+	.product {
+		margin: 0 10px;
+	}
+	</style>
+	</head>
+	<body>
+		<header>
+		 <a href="#" onclick="goBack(2)">
+			<img src="Images/NútQL.png" alt="Quay lại" class="back-button">
+		</a>
+			<div class="container">
+			 <h1>NHAT HAO SPORT</h1>
+			</div>
+			<h1 class="CS">Hướng dẫn chọn kích cỡ cho phù hợp</h1>
+		</header>
+
+		<main>
+			<section class="container guide">
+				<h2>Bước 1: Chuẩn bị dụng cụ đo.</h2>
+				<p>Chuẩn bị những dụng cụ sau để bắt đầu đo chính xác size giày bạn có thể mang ngay tại nhà mà không cần thử:</P>
+					<p>- Thước</p>
+					<p>- Giấy trắng</p>
+					<p>- Bút chì</p>
+				<h2>Bước 2: Vẽ kích cỡ bàn chân.</h2>
+					<p>- Đặt tờ giấy sàn nơi bằng phẳng, vuông góc với bức tường.</p>
+					<p>- Đặt gót chân sao cho chạm nhẹ vào tường và áp bàn chân lên tờ giấy, vuông góc với bức tường.</p>
+					<p>- Lấy bút để vẽ lại chính xác khung bàn chân của bạn. (Nên để bút nghiêng ra ngoài 1 tí để tránh thân bút làm sai lệch kích cỡ).</p>
+					<p>- Giữ cố định bàn chân bạn trong quá trình bạn dùng bút để vẽ hình bàn chân.</p>
+				<h2>Bước 3: Đo kích cỡ bàn chân.</h2>
+					<p>- Sau khi đã có bản vẽ kích thước bàn chân của bạn trên tờ giấy thì việc còn lại vô cùng đơn giản đó là: đo chiều dài dài nhất và chiều rộng rộng nhất của bản vẽ.</p>
+					<p>- Số liệu chiều dài dài nhất của bạn = Chiều dài + 1 cm (trừ hao tất và chiều rộng).</p>
+					<p><b>Ví dụ</b>: chiều dài dài nhất trên bản vẽ kích thước bàn chân bạn vừa vẽ là 23cm thì chiều dài đối chiếu là 24cm. Với kích thước là 24cm ta đem đối chiếu với bảng size giày ở bước 4.</p>
+				<section class="products">
+			<div class="product">
+			<img src="Images/size1.png" alt="Sản phẩm 1">
+			</section>
+				<h2>Bước 4: So sánh số liệu với bảng size giày đá bóng Wika.</h2>
+					<p>- Sau khi đã có chiều dài đôi chân bạn sẽ áp vào bảng size giày tiêu chuẩn thiết kế của Wika để chọn lấy một kích cỡ phù hợp.</p>
+					<p><b>Ví dụ</b>: bạn đo chân bạn có chiều dài 25 cm thì nên chọn size giày 41 để thừa dự phòng 0,5 – 1 cm cho tất hoặc độ bè bàn chân.</p>
+				<section class="products">
+			<div class="product">
+			<img src="Images/size.png" alt="Sản phẩm 1">
+			</section>
+		</main>
+	 <script>
+	  function goBack() {
+		window.history.back();
+	}
+	  </script>
+	</body>
+	</html>

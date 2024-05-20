@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 10px;
+			 margin-bottom: 5px
+        }
+        header {
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+			margin-bottom: 5px
+        }
+        nav ul {
+            list-style: none;
+            margin: 10;
+            padding: 0;
+            text-align: center;
+        }
+        nav li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        .login-container {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+        }
+        .login-container a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+        .login-container a:hover, nav a:hover {
+            color: blue;
+        }
+        main {
+            padding: 20px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .product-item {
+            width: 250px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            border: 3px solid red;
+            border-radius: 15px;
+        }
+        .product-item:hover {
+            transform: translateY(-5px);
+        }
+        .product-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #ddd;
+        }
+        .product-item p {
+            margin-top: 10px;
+            color: green;
+        }
+        .product-item button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 20px;
+        }
+        .product-item button:hover {
+            background-color: blue;
+        }
+        .search-container {
+            position: relative;
+            margin-left: 20px;
+        }
+        .search-container input[type=text],
+        .search-container select {
+            width: 200px;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+        .search-container input[type=text]:focus {
+            border-color: red;
+        }
+        .search-container button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .search-container button:hover {
+            background-color: darkred;
+        }
+        .search-results {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 200px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-top: none;
+            display: none;
+        }
+        .search-results ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .search-results li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+        }
+        .search-results li:last-child {
+            border-bottom: none;
+        }
+        .search-results li:hover {
+            background-color: #f0f0f0;
+        }
+        .rounded-button {
+            background-color: white;
+            color: black;
+            padding: 5px 20px;
+            border: 2px solid red;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .rounded-button:hover {
+            background-color: white;
+            color: blue;
+        }
+        .support-links ul a:hover {    
+            color: blue;
+        }
+        footer {
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+			color:red;
+        }
+    </style>
+<body>
+   <header>
+    <img src="Images/logo.png" alt="Logo" class="logo">
+    <h1>NHAT HAO SPORT</h1>
+        <div class="header-products">
+            <h2>Danh Mục Sản Phẩm</h2>
+            <button class="rounded-button" id="redirectButton3"><b>Tất cả</b></button>
+            <button class="rounded-button" id="redirectButton1"><b>Wika DragonX</b></button>
+            <button class="rounded-button" id="redirectButton2"><b>Wkia VH5</b></button>
+        </div>
+     <main>
+        <section class="products">
+            <div class="product-item">
+                <img src="Images/wika6.png" alt="Giày thể thao 1">
+                <h3>Giày đá bóng Wika DragonX Hoàng Đức</h3>
+                <p><b>Giá: 500.000 VNĐ</b></p>
+				<a href="Mua Hàng.html"><button>Mua ngay</button></a>
+            </div>
+			<div class="product-item">
+                <img src="Images/wika7.png" alt="Giày thể thao 1">
+                <h3>Giày đá bóng Wika DragonX Hoàng Đức</h3>
+                <p><b>Giá: 500.000 VNĐ</b></p>
+				<a href="Mua Hàng1.html"><button>Mua ngay</button></a>
+            </div>
+			<div class="product-item">
+                <img src="Images/wika8.png" alt="Giày thể thao 1">
+                <h3>Giày đá bóng Wika DragonX Hoàng Đức</h3>
+                <p><b>Giá: 500.000 VNĐ</b></p>
+               	<a href="Mua Hàng2.html"><button>Mua ngay</button></a>
+            </div>
+			<div class="product-item">
+                <img src="Images/wika9.png" alt="Giày thể thao 1">
+                <h3>Giày đá bóng Wika DragonX Hoàng Đức</h3>
+                <p><b>Giá: 500.000 VNĐ</b></p>
+                <a href="Mua Hàng3.html"><button>Mua ngay</button></a>
+            </div>
+			<div class="product-item">
+                <img src="Images/wika10.png" alt="Giày thể thao 1">
+                <h3>Giày đá bóng Wika DragonX Hoàng Đức</h3>
+               <p><b>Giá: 500.000 VNĐ</b></p>
+               	<a href="Mua Hàng4.html"><button>Mua ngay</button></a>
+            </div>
+            <div class="product-item">
+                <img src="Images/vh1.png" alt="Giày thể thao 2">
+                <h3>Giày đá bóng Wika VH5 Đoàn Văn Hậu</h3>
+                <p><b>Giá: 500.000 VNĐ</b></p>
+              	<a href="Mua Hàng 5.html"><button>Mua ngay</button></a>
+            </div>
+			<div class="product-item">
+                <img src="Images/vh2.png" alt="Giày thể thao 2">
+                <h3>Giày đá bóng Wika VH5 Đoàn Văn Hậu</h3>
+                <p><b>Giá: 500.000 VNĐ</b></p>
+              	<a href="Mua Hàng 6.html"><button>Mua ngay</button></a>
+            </div>
+			<div class="product-item">
+                <img src="Images/vh3.png" alt="Giày thể thao 3">
+                <h3>Giày đá bóng Wika VH5 Đoàn Văn Hậu</h3>
+                <p><b>Giá: 500.000 VNĐ</b></p>
+                	<a href="Mua Hàng 7.html"><button>Mua ngay</button></a>
+            </div>
+			<div class="product-item">
+                <img src="Images/vh4.png" alt="Giày thể thao 4">
+                <h3>Giày đá bóng Wika VH5 Đoàn Văn Hậu</h3>
+               <p><b>Giá: 500.000 VNĐ</b></p>
+                	<a href="Mua Hàng 8.html"><button>Mua ngay</button></a>
+            </div>
+			<div class="product-item">
+                <img src="Images/vh5.png" alt="Giày thể thao 5">
+                <h3>Giày đá bóng Wika VH5 Đoàn Văn Hậu</h3>
+                <p><b>Giá: 500.000 VNĐ</b></p>
+                	<a href="Mua Hàng 9.html"><button>Mua ngay</button></a>
+            </div>
+            </section>
+    </main>
+	 <div class="header-products">
+            <button class="rounded-button" id="redirectButton4"><b><h2>Hỗ Trợ Khách Hàng</h2></b></button>
+	 </div>
+   
+	 <script>
+        var redirectButton1 = document.getElementById('redirectButton1');
+        var redirectButton2 = document.getElementById('redirectButton2');
+		var redirectButton3 = document.getElementById('redirectButton3');
+		var redirectButton4 = document.getElementById('redirectButton4');
+		
+        redirectButton3.addEventListener('click', function() {
+            window.location.href = 'Tất Cả.html';
+        });
+        redirectButton1.addEventListener('click', function() {
+            window.location.href = 'Sản Phẩm HD.html';
+        });
+        redirectButton2.addEventListener('click', function() {
+            window.location.href = 'Sản Phẩm VH5.html';
+        });
+		 redirectButton4.addEventListener('click', function() {
+            window.location.href = 'Liên Hệ.html';
+        });
+    </script>
+	<header>
+	    <footer class="footer">
+        <p><b>Bản quyền © 2024 NhatHaoSport, đã đăng ký, bảo lưu mọi quyền.<b></p>
+	</header>
+    </footer>
+    </header>
+</body>
+</html>

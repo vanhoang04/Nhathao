@@ -1,0 +1,149 @@
+	<!DOCTYPE html>
+	<html lang="vi">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Liên hệ</title>
+		<link rel="stylesheet" href="style.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+				background-color: white;
+			}
+			 header {
+				padding: 20px;
+				text-align: center;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				position: relative; 
+				background-color: white;
+			}
+			.header-products {
+				display: flex;
+				justify-content: center;
+			}
+
+			.back-button {
+				position: absolute;
+				left: 10px;
+				top: 10px;
+				width: 30px; 
+				height: 30px;
+			}
+			.logo {
+				margin-top: 10px; 
+				color: #333;
+				font-size: 24px; 
+			}
+			h1 {
+				text-align: center;
+				color: #333;
+				margin-top: 30px;
+			}
+			nav ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				text-align: center;
+			}
+			nav a {
+				text-decoration: none;
+				color: #333;
+				font-size: 20px;
+				transition: color 0.3s ease;
+			}
+			nav a:hover {
+				color: red;
+			}
+			main {
+				padding: 20px;
+				text-align: center;
+			}
+		  
+			h2 {
+				color: #333;
+			}
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				text-align: left;
+			}
+			ul li {
+				margin-bottom: 10px;
+			}
+			ul li a {
+				color: black;
+				text-decoration: none;
+				transition: color 0.3s ease;
+			}
+			ul li a:hover {
+				color: #0056b3;
+			}
+			form {
+				margin-top: 30px;
+			}
+			button {
+				padding: 12px 24px;
+				background-color: red;
+				color: #fff;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				font-size: 16px;
+				transition: background-color 0.3s ease;
+			}
+			button:hover {
+				background-color: darkred;
+			}
+				.rounded-button {
+			background-color: white;
+			color: black;
+			padding: 5px 20px;
+			border: 2px solid red;
+			border-radius: 10px;
+			text-decoration: none;
+			transition: background-color 0.3s ease, color 0.3s ease;
+		}
+		.rounded-button:hover {
+			background-color: white;
+			color: blue;
+		}
+		section {
+		text-align: left;
+		}
+		</style>
+	</head>
+	<body>
+		<header>
+			<a href="#" onclick="goBack(2)">
+			<img src="Images/NútQL.png" alt="Quay lại" class="back-button">
+		</a>
+		<h1 class="logo">NHAT HAO SPORT</h1>
+					</header>
+		<main>
+		  <div class="header-products">
+			<ul>
+			 <a href="Chọn size.html" class="rounded-button"><b>Hướng dẫn chọn size giày</b></a>
+			 <a href="Hướng Dẫn.html" class="rounded-button"><b>Hướng dẫn mua hàng nhanh</b></a>
+			 <a href="Biểu Mẫu.html" class="rounded-button"><b>Hãy liên hệ với tôi khi bạn cần</b></a>
+			</ul>
+		  </div>
+			<section>
+			<h2>Thông tin liên hệ của Shop</h2>
+				<ul> 
+					<li><b>Điạ chỉ: Ấp 1, xã Phong Phú, huyện Cầu Kè, tỉnh Trà Vinh</b></li>
+					<li><b>Facebook: Nhật Hào</b></li>
+					<li><b>Email: <a href="mailto:nhathao21112004@gmail.com">NhatHaoSport@gmail.com<b></a></li>
+					<li><b>Điện thoại: 0337048780</b></li>
+				</ul>
+			</section>
+		</main>
+		 <script>
+		  function goBack() {
+			window.history.back();
+		}
+		  </script>
+	</body>
+	</html>

@@ -1,0 +1,196 @@
+	<!DOCTYPE html>
+	<html lang="vi">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tất cả sản phẩm</title>
+		<style>
+	 body {
+		font-family: Arial, sans-serif;
+		margin: 0;
+		padding: 0;
+		background-color: #f4f4f4;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	 header {
+				padding: 20px;
+				text-align: center;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				position: relative; 
+			}
+			.back-button {
+				position: absolute;
+				left: 10px;
+				top: 10px;
+				width: 30px; 
+				height: 30px;
+			}
+			.logo {
+				margin-top: 10px; 
+				color: #333;
+				font-size: 24px; 
+			}
+
+	nav ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+
+	nav li {
+		display: inline-block;
+		margin: 0 10px;
+	}
+
+	nav a {
+		text-decoration: none;
+		color: black;
+		font-size: 20px;
+		transition: color 0.3s ease;
+	}
+
+	nav a:hover {
+		color: #ffcd00;
+	}
+
+	main {
+		padding: 20px;
+	}
+
+	.products {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.product-item {
+		width: 250px;
+		margin: 10px;
+		border: 1px solid #ccc;
+		padding: 10px;
+		text-align: center;
+		background-color: white;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		transition: transform 0.3s ease;
+		border: 3px solid red;
+		border-radius: 15px;
+	}
+
+	.product-item:hover {
+		transform: translateY(-5px);
+	}
+	.product-item img {
+		width: 100%;
+		height: 150px;
+		object-fit: cover;
+		border-radius: 10px;
+	}
+	.product-item h3 {
+		margin-top: 10px;
+		color: #333;
+	}
+
+	.product-item p {
+		margin-top: 5px;
+		font-weight: bold;
+		color: green;
+	}
+	.product-item button {
+		background-color: red;
+		color: white;
+		padding: 10px 20px;
+		border: none;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		border-radius: 20px;
+	}
+
+	.product-item button:hover {
+		background-color: blue;
+	}
+
+	</style>
+	</head>
+	<body>
+		<header>
+		 <a href="#" onclick="goBack(2)">
+			<img src="Images/NútQL.png" alt="Quay lại" class="back-button">
+		</a>
+			 <h1>NHAT HAO SPORT</h1>
+		</header>
+	 <main>
+			<section class="products">
+				<div class="product-item">
+					<img src="Images/wika6.png" alt="Giày thể thao 1">
+					<h3>Giày đá bóng Wika DragonX Hoàng Đức</h3>
+					<p><b>Giá: 500.000 VNĐ</b></p>
+					<a href="Mua Hàng.html"><button>Mua ngay</button></a>
+				</div>
+				<div class="product-item">
+					<img src="Images/wika7.png" alt="Giày thể thao 1">
+					<h3>Giày đá bóng Wika DragonX Hoàng Đức</h3>
+					<p><b>Giá: 500.000 VNĐ</b></p>
+					<a href="Mua Hàng1.html"><button>Mua ngay</button></a>
+				</div>
+				<div class="product-item">
+					<img src="Images/wika8.png" alt="Giày thể thao 1">
+					<h3>Giày đá bóng Wika DragonX Hoàng Đức</h3>
+					<p><b>Giá: 500.000 VNĐ</b></p>
+					<a href="Mua Hàng2.html"><button>Mua ngay</button></a>
+				</div>
+				<div class="product-item">
+					<img src="Images/wika9.png" alt="Giày thể thao 1">
+					<h3>Giày đá bóng Wika DragonX Hoàng Đức</h3>
+					<p><b>Giá: 500.000 VNĐ</b></p>
+					<a href="Mua Hàng3.html"><button>Mua ngay</button></a>
+				</div>
+				<div class="product-item">
+					<img src="Images/wika10.png" alt="Giày thể thao 1">
+					<h3>Giày đá bóng Wika DragonX Hoàng Đức</h3>
+				   <p><b>Giá: 500.000 VNĐ</b></p>
+					<a href="Mua Hàng4.html"><button>Mua ngay</button></a>
+				</div>
+				<div class="product-item">
+					<img src="Images/vh1.png" alt="Giày thể thao 2">
+					<h3>Giày đá bóng Wika VH5 Đoàn Văn Hậu</h3>
+					<p><b>Giá: 500.000 VNĐ</b></p>
+					<a href="Mua Hàng 5.html"><button>Mua ngay</button></a>
+				</div>
+				<div class="product-item">
+					<img src="Images/vh2.png" alt="Giày thể thao 2">
+					<h3>Giày đá bóng Wika VH5 Đoàn Văn Hậu</h3>
+					<p><b>Giá: 500.000 VNĐ</b></p>
+					<a href="Mua Hàng 6.html"><button>Mua ngay</button></a>
+				</div>
+				<div class="product-item">
+					<img src="Images/vh3.png" alt="Giày thể thao 3">
+					<h3>Giày đá bóng Wika VH5 Đoàn Văn Hậu</h3>
+					<p><b>Giá: 500.000 VNĐ</b></p>
+						<a href="Mua Hàng 7.html"><button>Mua ngay</button></a>
+				</div>
+				<div class="product-item">
+					<img src="Images/vh4.png" alt="Giày thể thao 4">
+					<h3>Giày đá bóng Wika VH5 Đoàn Văn Hậu</h3>
+				   <p><b>Giá: 500.000 VNĐ</b></p>
+						<a href="Mua Hàng 8.html"><button>Mua ngay</button></a>
+				</div>
+				<div class="product-item">
+					<img src="Images/vh5.png" alt="Giày thể thao 5">
+					<h3>Giày đá bóng Wika VH5 Đoàn Văn Hậu</h3>
+					<p><b>Giá: 500.000 VNĐ</b></p>
+						<a href="Mua Hàng 9.html"><button>Mua ngay</button></a>
+				</div>
+				</section>
+		</main>
+			 <script>
+	  function goBack() {
+		window.history.back();
+	}
+	  </script>
+	</body>
+	</html>

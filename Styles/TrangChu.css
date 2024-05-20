@@ -1,0 +1,176 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 30px;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            margin: 10;
+            padding: 0;
+            text-align: center;
+        }
+        nav li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        .login-container {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+        }
+        .login-container a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+        .login-container a:hover, nav a:hover {
+            color: blue;
+        }
+        main {
+            padding: 20px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .product-item {
+            width: 250px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .product-item:hover {
+            transform: translateY(-5px);
+        }
+        .product-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .product-item h3 {
+            margin-top: 15px;
+            color: #333;
+        }
+        .product-item p {
+            margin-top: 10px;
+            color: #777;
+        }
+        .product-item button {
+            color: #fff;
+            background-color: red;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .product-item button:hover {
+            background-color: darkred;
+        }
+        .search-container {
+            position: relative;
+            margin-left: 20px;
+        }
+        .search-container input[type=text],
+        .search-container select {
+            width: 200px;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+        .search-container input[type=text]:focus {
+            border-color: red;
+        }
+        .search-container button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .search-container button:hover {
+            background-color: darkred;
+        }
+        .search-results {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 200px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-top: none;
+            display: none;
+        }
+        .search-results ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .search-results li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+        }
+        .search-results li:last-child {
+            border-bottom: none;
+        }
+        .search-results li:hover {
+            background-color: #f0f0f0;
+        }
+        .logo {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+.footer {
+    text-align: center;
+}
+
+.support-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.support-links a:hover {
+    color: blue;
+}
+.support-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}

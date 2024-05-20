@@ -1,0 +1,102 @@
+	<!DOCTYPE html>
+	<html lang="vi">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hướng dẫn mua hàng</title>
+		<link rel="stylesheet" href="style.css">
+		<style>
+	body {
+		font-family: Arial, sans-serif;
+		margin: 0;
+		padding: 0;
+		background-color: white;
+	}
+
+	.container {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	 header {
+				padding: 20px;
+				text-align: center;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				position: relative; 
+			}
+			.back-button {
+				position: absolute;
+				left: 10px;
+				top: 10px;
+				width: 30px; 
+				height: 30px;
+			}
+			.logo {
+				margin-top: 10px; 
+				color: #333;
+				font-size: 24px; 
+			}
+	nav ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	nav ul li a {
+		text-decoration: none;
+		color: #333;
+		font-weight: normal;
+		transition: color 0.3s ease;
+	}
+
+	nav ul li a:hover {
+		color: blue;
+	}
+	main {
+		padding: 20px 0;
+	}
+
+	.guide h2 {
+		color: #333;
+	}
+
+	.products {
+		display: flex;
+		justify-content: center;
+		margin-top: 30px;
+	}
+
+	.product {
+		margin: 0 10px;
+	}
+	</style>
+	</head>
+	<body>
+	   <header>
+	  <a href="#" onclick="goBack(2)">
+			<img src="Images/NútQL.png" alt="Quay lại" class="back-button">
+		</a>
+			<div class="container">
+			 <h1>NHAT HAO SPORT</h1>		
+			 <h1 class="HD">Hướng dẫn mua hàng</h1>
+			</div>
+		</header>
+
+		<main>
+			<section class="container guide">
+				<h2>Bước 1. Chọn sản phẩm.</h2>
+				<p>Trước tiên, hãy xem qua danh sách sản phẩm trên trang web của chúng tôi và chọn sản phẩm bạn muốn mua.</p>
+				<h2>Bước 2. Mua ngay.</h2>
+				<p>Khi đã chọn được sản phẩm, nhấn vào nút "Mua ngay" để đưa sản phẩm vào danh sách muốn mua của bạn.</p>
+				<h2>Bước 3. Đặt hàng.</h2>
+				<p>Xem mô tả sản phẩm, xác định mua nhấn vào nút "Đặt hàng" ở góc bên dưới sản phẩm.</p>
+				<h2>Bước 4. Xác nhận mua hàng.</h2>
+				<p>Điền đầy đủ thông tin, sau đó bạn nhấn vào nút "Mua hàng" tiến hành thanh toán bằng các phương thức thanh toán được cung cấp.</p>
+			</section>
+		</main>
+		 <script>
+		  function goBack() {
+			window.history.back();
+		}
+		  </script>
+	</body>
+	</html>
